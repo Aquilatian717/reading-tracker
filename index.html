@@ -8,29 +8,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
-  
-  <!-- Step 1: Add Babel for JSX/TSX transpilation in the browser -->
+
+  <!-- 1. Babel for in-browser transpilation -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- Step 2: Update Import Map for module resolution with React 19 -->
+  <!-- 2. Import Map for stable React 18 -->
   <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@19.1.1",
-    "react/jsx-runtime": "https://esm.sh/react@19.1.1/jsx-runtime",
-    "react-dom/client": "https://esm.sh/react-dom@19.1.1/client",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
     "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
     "react/": "https://esm.sh/react@^19.1.1/"
   }
 }
 </script>
-
-  <!-- Step 3: Tell the browser to use Babel to process your script -->
-  <script type="text/babel" data-type="module" src="index.tsx"></script>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body>
+  <!-- Root element for React app -->
   <div id="root"></div>
+
+  <!-- 3. Load the app script, telling Babel to transpile it -->
+  <!-- data-presets tells Babel how to transpile (React+TypeScript) -->
+  <script type="text/babel" data-presets="react,typescript" data-type="module" src="index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>
