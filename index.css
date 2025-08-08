@@ -1,0 +1,326 @@
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --success-color: #28a745;
+  --success-hover-color: #218838;
+  --danger-color: #dc3545;
+  --danger-hover-color: #c82333;
+  --secondary-color: #6c757d;
+  --secondary-hover-color: #5a6268;
+  --light-gray-color: #f8f9fa;
+  --medium-gray-color: #dee2e6;
+  --dark-gray-color: #495057;
+  --text-color: #212529;
+  --white-color: #fff;
+  --font-family: 'Noto Sans SC', sans-serif;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--light-gray-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+#root {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1, h2 {
+  color: var(--dark-gray-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.card {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group, .user-management-form .form-group {
+  margin-bottom: 0; /* Reset margin for grid layout */
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--medium-gray-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: var(--font-family);
+  transition: border-color 0.2s;
+}
+
+.edit-input {
+  max-width: 80px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.button-primary:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.button-danger {
+  background-color: var(--danger-color);
+  color: var(--white-color);
+}
+.button-danger:hover {
+    background-color: var(--danger-hover-color);
+}
+
+.button-success {
+    background-color: var(--success-color);
+    color: var(--white-color);
+}
+.button-success:hover {
+    background-color: var(--success-hover-color);
+}
+
+.button-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+.button-secondary:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+.button-edit {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+.button-edit:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+
+.checkin-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.user-management-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--medium-gray-color);
+  vertical-align: middle;
+}
+
+th {
+  background-color: var(--light-gray-color);
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+.rank-cell {
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center !important;
+    color: var(--primary-color);
+}
+
+.status-checked-in {
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+.status-not-checked-in {
+  color: var(--danger-color);
+  font-weight: 500;
+}
+
+details {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--medium-gray-color);
+  margin-bottom: 2rem;
+  background-color: var(--white-color);
+}
+details:last-child {
+    margin-bottom: 0;
+}
+
+
+summary {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  list-style: revert; /* Use default triangle marker */
+}
+
+summary:hover {
+  background-color: var(--light-gray-color);
+}
+
+details[open] > summary {
+  border-bottom: 1px solid var(--medium-gray-color);
+}
+
+details > .card {
+  box-shadow: none;
+  border-top: none;
+  margin-bottom: 0;
+  padding-top: 0;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.manage-user-cell {
+    width: 180px;
+    text-align: center !important;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.action-buttons .button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.export-button {
+    margin-top: 1.5rem;
+    width: auto;
+}
+
+.chart-container {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.chart-container svg {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+}
+.chart-container svg text {
+    fill: var(--dark-gray-color);
+}
+.chart-container svg circle:hover {
+    r: 6;
+    fill: var(--danger-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    margin: 1rem auto;
+    padding: 0.5rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  summary { font-size: 1.25rem; }
+  
+  .card, details > .card {
+    padding: 1rem;
+  }
+  
+  .checkin-form, .user-management-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .checkin-form .button, .user-management-form .button {
+      width: 100%;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+  th, td {
+      padding: 0.5rem;
+  }
+
+  .manage-user-cell {
+      width: auto;
+  }
+  .action-buttons {
+      flex-direction: column;
+  }
+}

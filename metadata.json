@@ -1,0 +1,5 @@
+{
+  "name": "Reading Tracker",
+  "description": "A simple app to track daily reading progress for a group.",
+  "requestFramePermissions": []
+}
